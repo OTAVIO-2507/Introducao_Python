@@ -22,6 +22,16 @@ O repositório organiza a progressão dos estudos em duas frentes: as listas de 
 | Lista de Exercícios — Parte 3 | Consolidação dos fundamentos com novos desafios |
 | Projeto Python Data Science | Projeto prático aplicando os conceitos em análise de dados |
 
+## Decisões de projeto
+
+Algumas escolhas que não são óbvias pelo código:
+
+**O caderno do curso e as listas resolvidas ficam separados.** `Notebook/` guarda o material acompanhado em aula, com as células na ordem da explicação; `Notebook - Exercícios/` guarda as três listas resolvidas por conta própria. Misturar os dois num arquivo só apagaria a distinção entre o que foi copiado e o que foi produzido — que é justamente o que um repositório de estudo precisa deixar claro.
+
+**O teste de primo usa `for`/`else`, não variável de controle.** O `else` de um laço em Python roda apenas quando ele termina sem `break`. Isso dispensa o `eh_primo = True` que a maioria das soluções cria e depois precisa lembrar de atualizar dentro do laço — o próprio fluxo carrega a resposta.
+
+**A leitura por sentinela é feita antes e dentro do laço.** No exercício da média de temperaturas, o valor é lido uma vez antes do `while` e novamente ao final de cada volta. É o que impede o encerrador (`-273`) de entrar na soma e no contador, erro clássico de quem lê só dentro do laço.
+
 ## Tecnologias
 
 | Tecnologia | Aplicação no projeto |
